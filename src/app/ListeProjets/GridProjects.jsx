@@ -7,18 +7,22 @@ const GridProjects = () => {
       <ProjectCard
         desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolor, enim reiciendis quibusdam cupiditate id maxime nemo explicabo, suscipit perferendis aliquid sit quam vero repudiandae commodi laborum! Velit, officiis ipsum."
         title="GED A"
+        id={1}
       />
       <ProjectCard
         desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolor, enim reiciendis quibusdam cupiditate id maxime nemo explicabo, suscipit perferendis aliquid sit quam vero repudiandae commodi laborum! Velit, officiis ipsum."
         title="GED A"
+        id={2}
       />
       <ProjectCard
         desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolor, enim reiciendis quibusdam cupiditate id maxime nemo explicabo, suscipit perferendis aliquid sit quam vero repudiandae commodi laborum! Velit, officiis ipsum."
         title="GED A"
+        id={3}
       />
       <ProjectCard
         desc="Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt dolor, enim reiciendis quibusdam cupiditate id maxime nemo explicabo, suscipit perferendis aliquid sit quam vero repudiandae commodi laborum! Velit, officiis ipsum."
         title="GED A"
+        id={4}
       />
     </div>
   );

@@ -9,7 +9,7 @@ import { IoMdNotificationsOutline } from "react-icons/io";
 const Sidebar = ({ active }) => {
   return (
     <div className="w-1/5 border-r-2 shadow min-h-max bg-white flex flex-col px-6 pt-[5%]">
-      <ul className="Logo flex flex-col gap-14 font-medium tracking-wide text-black">
+      <ul className="Logo flex flex-col gap-14 font-medi-um tracking-wide text-black">
         <li>
           <img src="/images/Logo.png" alt="Logo" />
         </li>

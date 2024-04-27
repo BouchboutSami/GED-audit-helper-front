@@ -21,7 +21,11 @@ const page = () => {
         <div className="recherche flex flex-row gap-10 w-full mb-4">
           <div className="flex flex-row px-10 py-2 rounded-xl items-center bg-white gap-5 w-3/4">
             <CiSearch color="#A1A1A1" className="" size={25} />
-            <input type="text" placeholder="Recherche par mots-clés" />
+            <input
+              className="focus:outline-none w-full"
+              type="text"
+              placeholder="Recherche par mots-clés"
+            />
           </div>
           <button className="text-blanc px-8 py-3 rounded-xl bg-black text-white w-1/5">
             Recherche
