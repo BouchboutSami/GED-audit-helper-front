@@ -1,9 +1,12 @@
 "use client";
 import Sidebar from "@/components/Sidebar";
+import { usePathname } from "next/navigation";
 import React, { useState } from "react";
 import { IoCloudUploadOutline } from "react-icons/io5";
 
 const page = ({ params }) => {
+  const pathname = usePathname();
+  const idProject = pathname.split("/")[pathname.split("/").length - 1];
   const [project, setproject] = useState({});
   const [pdfActive, setpdfActive] = useState(false);
   const [resultPDFActive, setresultPDFActive] = useState(false);
@@ -71,18 +74,20 @@ const page = ({ params }) => {
                 Examiner le rapport d’audit documentaire
               </h2>
             </div>
-            <div className="card cursor-pointer flex flex-col bg-white px-[2%] py-4 gap-4 rounded-lg hover:scale-105">
-              <div className="w-full h-auto">
-                <img
-                  src="/images/circuit.png"
-                  alt=""
-                  className="rounded-lg w-full"
-                />
+            <a href={"/AmeliorerCircuit/" + idProject}>
+              <div className="card cursor-pointer flex flex-col bg-white px-[2%] py-4 gap-4 rounded-lg hover:scale-105">
+                <div className="w-full h-auto">
+                  <img
+                    src="/images/circuit.png"
+                    alt=""
+                    className="rounded-lg w-full"
+                  />
+                </div>
+                <h2 className="w-4/5">
+                  Examiner un circuit de validation (workflow)
+                </h2>
               </div>
-              <h2 className="w-4/5">
-                Examiner un circuit de validation (workflow)
-              </h2>
-            </div>
+            </a>
           </div>
         </div>
       </div>
