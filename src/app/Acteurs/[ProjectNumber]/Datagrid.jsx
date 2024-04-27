@@ -23,8 +23,9 @@ const rows = [
 ];
 
 export default function Datagrid() {
+  const [project, setproject] = useState({});
+  const [acteurs, setacteurs] = useState([]);
   const [rowSelectionModel, setRowSelectionModel] = useState([]);
-  console.log(rowSelectionModel);
   return (
     <div style={{ height: 380, width: "100%" }}>
       <div className="w-full flex flex-row bg-white items-center justify-evenly py-2 rounded-lg px-2">
