@@ -14,7 +14,7 @@ const HeroSection = () => {
           Intelligence artificielle blabla
         </p>
         <div className="buttons flex flex-row items-center gap-10">
-          <a href="/projectCreation">
+          <a href="/ProjectCreation">
             <button className="flex flex-row items-center gap-2 text-white bg-noir py-2 px-4 rounded-xl">
               <p>Créer un projet</p>
               <FaArrowRightLong />
