@@ -3,6 +3,7 @@ import HeroSection from "@/components/HeroSection";
 import Navbar from "@/components/Navbar";
 import Testimonials from "@/components/Testimonials/Testimonials";
 import React from "react";
+import Welcome from "@/components/WelcomeAfterSignUp/Welcome";
 
 const page = () => {
   return (
