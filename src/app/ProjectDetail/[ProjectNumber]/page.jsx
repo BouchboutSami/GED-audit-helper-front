@@ -20,20 +20,28 @@ const page = ({ params }) => {
       // send base64 to backend et f le last then =>
     };
   }
-  // function handleSuivant() {
-  //   if (rapport != null) {
-  //     setpdfActive(false);
-  //     setresultPDFActive(true);
-  //   }
-  // }
+  function handleClick(e) {
+    e.preventDefault();
+    if (rapport != null) {
+      setpdfActive(false);
+      setresultPDFActive(true);
+    }
+  }
+  function handleClickDetails(e) {
+    e.preventDefault();
+    setpdfActive(false);
+    setresultPDFActive(false);
+  }
   return (
     <div className="relative">
       <div
         className="w-full flex flex-row"
-        style={{ opacity: pdfActive === false ? 1 : 0.3 }}
+        style={{
+          opacity: pdfActive === false && resultPDFActive === false ? 1 : 0.3,
+        }}
       >
-        <Sidebar />
-        <div className="right  w-auto pl-[5%] pr-[10%] py-[5%] flex flex-col">
+        <Sidebar projet={true} />
+        <div className="right ml-[20%] w-auto pl-[5%] pr-[10%] py-[5%] flex flex-col">
           <h1 className="text-4xl font-semibold mb-8">
             Projet GED {params.ProjectNumber}
           </h1>
@@ -95,14 +103,29 @@ const page = ({ params }) => {
             />
           </div>
           {rapport != null && <p>{rapport.name}</p>}
-          <button className="px-6 py-2 flex items-center justify-center bg-black text-white rounded-lg">
+          <button
+            className="px-6 py-2 flex items-center justify-center bg-black text-white rounded-lg"
+            onClick={(e) => {
+              handleClick(e);
+            }}
+          >
             Suivant
           </button>
         </div>
       )}
       {resultPDFActive && (
         <div className="absolute w-[40vw] bg-white top-[50%] left-[50%] translate-x-[-50%] translate-y-[-50%] z-10 rounded-xl flex flex-col items-center justify-center gap-10 py-10">
-          <button className="px-6 py-2 flex items-center justify-center bg-black text-white rounded-lg">
+          <div className="results w-4/5">
+            <p>N acteurs trouvés</p>
+            <p>N documents trouvés</p>
+            <p>N circuits de validation</p>
+          </div>
+          <button
+            className="px-6 py-2 flex items-center justify-center bg-black text-white rounded-lg"
+            onClick={(e) => {
+              handleClickDetails(e);
+            }}
+          >
             Voir détails
           </button>
         </div>

@@ -8,8 +8,8 @@ import GridProjects from "./GridProjects";
 const page = () => {
   return (
     <div className="w-full flex flex-row">
-      <Sidebar />
-      <div className="w-auto pl-[5%] pr-[10%] py-[5%] flex flex-col gap-4">
+      <Sidebar projet={false} />
+      <div className="w-auto ml-[20%] pl-[5%] pr-[10%] py-[5%] flex flex-col gap-4">
         <h1 className="text-4xl font-semibold text-[#262626] mb-4">
           Mes projets
         </h1>
@@ -32,6 +32,11 @@ const page = () => {
           </button>
         </div>
         <GridProjects />
+        <a href="/ProjectCreation" className="flex justify-center">
+          <button className="text-white bg-noir px-6 py-2 w-fit mt-4 rounded-lg">
+            Créer un projet
+          </button>
+        </a>
       </div>
     </div>
   );

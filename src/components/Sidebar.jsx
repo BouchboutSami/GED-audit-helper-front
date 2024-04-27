@@ -6,9 +6,9 @@ import { GoWorkflow } from "react-icons/go";
 import { MdManageAccounts } from "react-icons/md";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
-const Sidebar = ({ active }) => {
+const Sidebar = ({ projet }) => {
   return (
-    <div className="w-1/5 border-r-2 shadow min-h-max bg-white flex flex-col px-6 pt-[5%]">
+    <div className="w-1/5 border-r-2 shadow h-screen fixed bg-white flex flex-col px-6 pt-[5%]">
       <ul className="Logo flex flex-col gap-14 font-medi-um tracking-wide text-black">
         <li>
           <img src="/images/Logo.png" alt="Logo" />
@@ -22,18 +22,26 @@ const Sidebar = ({ active }) => {
             Mes projets
           </a>
         </li>
-        <li className="flex flex-col gap-3">
-          <h3 className="text-[#A1A1AA] text-xs">Configuration</h3>
-          <div className="flex items-center gap-2">
-            <CiUser color="#3F3F46" /> Acteurs
-          </div>
-          <div className="flex items-center gap-2">
-            <IoDocumentText color="#3F3F46" /> Documents
-          </div>
-          <div className="flex items-center gap-2">
-            <GoWorkflow color="#3F3F46" /> Circuits de validations
-          </div>
-        </li>
+        {projet && (
+          <li className="flex flex-col gap-3">
+            <h3 className="text-[#A1A1AA] text-xs">Configuration</h3>
+            <a href="Acteurs">
+              <div className="flex items-center gap-2">
+                <CiUser color="#3F3F46" /> Acteurs
+              </div>
+            </a>
+            <a href="Documents">
+              <div className="flex items-center gap-2">
+                <IoDocumentText color="#3F3F46" /> Documents
+              </div>
+            </a>
+            <a href="Circuits">
+              <div className="flex items-center gap-2">
+                <GoWorkflow color="#3F3F46" /> Circuits de validations
+              </div>
+            </a>
+          </li>
+        )}
         <li className="flex flex-col gap-3">
           <h3 className="text-[#A1A1AA] text-xs">Options</h3>
           <div className="flex items-center gap-2">
